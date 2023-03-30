@@ -343,14 +343,13 @@ section.landing .container .media-content{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 30px;
 }
 
 section.landing .container .media-content .imgage{
     background-color: brown;
-    width: 150px;
-    height: 250px;
+    min-width: 200px;
+    height: 350px;
     border-radius: 100px 100px 100px 100px / 75px 75px 75px 75px;
     background-image: url(https://source.unsplash.com/random/300×300);
     background-size: cover;
@@ -368,14 +367,12 @@ section.landing .container .media-content .imgage::before{
     left: -85%;
 }
 section.landing .container .media-content .text{
-    width: 200px;
-    max-width: 100%;
-}
-.text{
+    width: 300px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     gap: 15px;
+    min-width: 169px;
 }
 .text p{
     color: var(--p-clr);
@@ -438,9 +435,7 @@ section.landing .container .media-content .text{
 }
 
 @media (max-width:991px) {
-    section.landing .container .text-content{
-        width: 100%;
-    }
+    section.landing .container .text-content,
     section.landing .container .media-content{
         width: 100%;
     }
@@ -453,7 +448,10 @@ section.landing .container .media-content .text{
 }
 @media (max-width:450px) {
     section.landing .container .media-content{
-        justify-content: center;
+        flex-wrap: wrap;
+    }
+    section.landing .container .media-content .imgage{
+        margin-inline: auto;
     }
 }
 /* start landing */
@@ -515,6 +513,11 @@ section.services .text h3{
     font-size: 20px;
     margin-bottom: 10px;
     font-weight: 500;
+}
+@media (max-width:991px) {
+    section.services .images{
+        margin-inline: auto;
+    }
 }
 /* end services */
 
@@ -686,7 +689,7 @@ section.clients .container .text .arrow:hover{
     section.clients .container{
         justify-content: center;
     }
-    section .container .text{
+    section.clients .container .text{
         width: 550px !important;
     }
 }
