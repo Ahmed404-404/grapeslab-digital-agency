@@ -653,7 +653,10 @@ footer .container .text-box ul{
     align-items: flex-start;
     gap: 5px;
 }
-
+footer ul li p{
+    font-size: 14px;
+    color: var(--p-clr);
+}
 footer .container .text-box ul:not(:first-child) li a{
     color: var(--p-clr);
     font-size: 14px;
